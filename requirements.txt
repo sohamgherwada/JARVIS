@@ -1,0 +1,13 @@
+
+pydub
+AppOpener
+pyautogui
+duckduckgo-search
+ollama
+lancedb
+beautifulsoup4
+sentence-transformers
+mss
+pillow
+fastapi
+uvicorn

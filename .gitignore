@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+brain_data/
+temp/
+voice_sample/
+.gemini/
+.agent/
+.vscode/
