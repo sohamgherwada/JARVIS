@@ -73,7 +73,10 @@ class StreamingLLM:
                 json={
                     "model": OLLAMA_MODEL,
                     "messages": messages,
-                    "stream": True
+                    "stream": True,
+                    "options": {
+                        "stop": ["User:", "Sir:", "[USER]", "[user]"]
+                    }
                 },
                 stream=True,
                 timeout=60
@@ -113,7 +116,7 @@ if __name__ == "__main__":
     print("Testing streaming LLM...")
     print("JARVIS: ", end="", flush=True)
     
-    for chunk in llm.chat_stream("Hey Jarvis, I'm feeling a bit overwhelmed today"):
+    for chunk in llm.chat_stream("I'm feeling really anxious about my upcoming exam, I don't know if I'm smart enough."):
         print(chunk, end="", flush=True)
     
     print()
